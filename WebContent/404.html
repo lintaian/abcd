@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>404错误</title>
+</head>
+<body>
+	<div style="margin: 100px auto; width: 900px;">
+		<img src="./img/404.jpg" style="float: left;">
+		<div style="padding-top: 138px;">
+			<h2>您访问的页面不存在,请检查您访问的路径是否正确!</h2>
+			<h3>&nbsp;&nbsp;我们正在联系火星总部，尽快解决该问题。</h3>
+			<h3>&nbsp;&nbsp;您可以: <a href="javascript:void(0);" data-back-main>返回主页</a>
+				或者 <a href="javascript:void(0);" data-refresh>刷新</a></h3>		
+		</div>
+	</div>
+	<script src="./js/lib/jquery.js"></script>
+	<script>
+		$(function() {
+			$('a[data-back-main]').click(function() {
+				top.window.location.href = './main';
+			});
+			$('a[data-refresh]').click(function() {
+				window.location.reload(true);
+			});
+		});
+	</script>
+</body>
+</html>

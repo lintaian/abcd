@@ -1,0 +1,119 @@
+@CHARSET "UTF-8";
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+input:focus {
+	background-color: #ffe48d;
+}
+.hide {
+	display: none;
+}
+
+.title {
+	line-height: 45px;
+	font-size: 20px;
+	margin-left: 20px;
+	position: relative;
+}
+.title2 {
+	line-height: 26px;
+	font-size: 14px;
+	margin-left: 20px;
+	position: relative;
+}
+
+.footer {
+	line-height: 45px;
+	font-size: 20px;
+	margin-left: 20px;
+	position: relative;
+}
+
+.title .right,
+.footer .right {
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+}
+.unit-tree {
+	position: absolute;
+  	background-color: whitesmoke;
+	width: 290px;
+	height: 225px;
+	overflow: auto;
+	border: 1px solid gray;
+	border-radius: 5px;
+	z-index: 1;
+	top: 30px;
+	left: 0px;
+}
+#school {
+	width: 280px;
+	border-radius: 5px;
+	border: 1px solid #95B8E7;
+	padding: 3px 0;
+}
+.classes span {
+	float: left;
+	width: 52px;
+}
+#chooseExamWin table tr {
+	line-height: 30px;
+}
+#submit {
+	position: absolute;
+	left: 16px;
+	bottom: 10px;
+	width: 364px;
+}
+.layout-split-north {
+	border: none;
+}
+.left {
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+}
+
+.left .slider {
+	margin-top: 26px;
+}
+#chooseQuestion .combo {
+	margin-top: 10px;
+  	float: right;
+}
+#center {
+	text-align: center;
+	position: relative;
+}
+.operaterBtn a.choose span {
+	background: #ffe48d;
+}
+.operaterBtn a.invalid span {
+	opacity: 0.4;
+  	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+}
+#main {
+	margin: 0 auto;
+}
+#main.pen {
+	cursor: url("../img/pen.png"), crosshair;
+}
+#canvasColours div {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 5px;
+	border: 1px solid;
+	opacity: 0.3;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+}
+#canvasColours div.choose {
+	opacity: 1;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);	
+}
+.widthSlider .slider {
+	margin-top: 20px;
+}

@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+.mu-hide {
+	display: none;
+}
+.mu-modal {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	z-index: 99990;
+	background-color: rgba(0,0,0,.6);
+}
+.mu-alert {
+	position: fixed;
+	z-index: 99991;
+	background-color: white;
+	border: 1px gray solid;
+	border-radius: 6px;
+	min-width: 400px;
+}
+.mu-alert>div {
+	padding: 10px;
+	text-align: center;
+}
+.mu-alert .mu-alert-title {
+	font-size: 16px;
+	text-align: left;
+}
+.mu-alert .mu-alert-content {
+	border-bottom: 1px solid #dedede;
+	border-top: 1px solid #dedede;
+}
+.mu-alert .mu-alert-btn button {
+	padding: 6px;
+	color: #fff;
+	background-color: #0e90d2;
+	cursor: pointer;
+	border-radius: 4px;
+  	border: none;
+}
+.mu-loading {
+	position: fixed;
+	z-index: 99991;
+	color: white;
+}
+.mu-loading>* {
+	float: left;
+}
+.mu-loading-text {
+	line-height: 30px;
+	margin-left: 16px;
+}
+.mu-dialog {
+	position: fixed;
+	z-index: 99991;
+	background-color: white;
+	border: 1px gray solid;
+	border-radius: 6px;
+	min-width: 400px;
+}
+.mu-dialog-frame {
+	position: fixed;
+	z-index: 99991;
+	background-color: white;
+	border: 1px gray solid;
+	border-radius: 6px;
+	width: 1000px;
+}
+.mu-dialog-frame iframe {
+	margin: 0 0 -5px 0!important;
+}

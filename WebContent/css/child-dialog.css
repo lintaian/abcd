@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+.goal-analysis {
+	position: fixed;
+	z-index: 99999;
+	top: 10px;
+	right: 10px;
+}
+.goal-analysis input {
+	width: 60px;
+	text-align: right;	
+}
+.direction-check {
+	position: fixed;
+	z-index: 99999;
+	top: 10px;
+	left: 10px;
+}
+.back {
+	position: fixed;
+	top: 4px;
+	left: 10px;
+}
+.summary {
+	position: fixed;
+	top: 50px;
+	left: 10px;
+	width: 240px;
+	height: 510px;
+	background-color: rgb(216, 218, 231);
+	padding: 5px;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+.summary .title {
+	margin: 10px 0;
+}
+.summary .content {
+	text-indent: 2em;
+}
+.summary .name {
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.summary .good {
+	color: green;
+	font-size: 20px;
+	font-weight: bold;
+}
+.summary .commonly {
+	color: blue;
+	font-size: 20px;
+	font-weight: bold;
+}
+.summary .bad {
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+}

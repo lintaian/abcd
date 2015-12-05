@@ -1,0 +1,15 @@
+.lta-loading {
+	position: absolute;
+  	top: 46%;
+  	left: 46%;
+  	z-index: 99999;
+}
+.lta-modal {
+	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	background-color: black;
+  	z-index: 99998;
+  	opacity: 0.1;
+  	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+}

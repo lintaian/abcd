@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+.hide {
+	display: none;
+}
+.operator {
+	margin-bottom: 10px;
+}
+.operator .in-line{
+	margin-left: 20px;
+}
+.operator .sort,
+.operator .draw-type {
+	opacity: 0.4;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+}
+.btn.single,
+.draw-type.single {
+	opacity: 1;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+.draw {
+	margin: 0 0 0 20px;
+	width: 174px;
+}
+.draw input {
+	width: 52px;
+}

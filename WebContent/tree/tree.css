@@ -1,0 +1,28 @@
+.ztree {
+	float: left;
+	margin-left: 20px;
+	height: 600px;
+	width: 300px;
+	border: 1px solid gray;
+}
+.ztree li span.button.add {
+	margin-left:2px; 
+	margin-right: -1px; 
+	background-position:-144px 0; 
+	vertical-align:top; 
+	*vertical-align:middle
+}
+body>* {
+	float: left;
+	margin-left: 30px;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+.get-result {
+	margin-top: 200px;
+}
+.result {
+	width: 500px;
+	height: 600px;
+	border: 1px solid gray;
+}

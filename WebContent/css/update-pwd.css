@@ -1,0 +1,23 @@
+.form-signin {
+	width: 300px;
+	margin: 20px auto;
+}
+.form-signin input {
+	margin: 10px 0;
+}
+.form-signin button {
+	width: 300px;
+	margin-top: 10px;
+	background: none;
+	background-color: rgb(24,56,94)
+}
+.up-title {
+	text-align: center;
+  	font-size: 20px;
+  	font-weight: bold;
+}
+#msg {
+	color: red;
+	line-height: 15px;
+	min-height: 15px;
+}

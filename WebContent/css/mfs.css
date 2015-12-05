@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+.main {
+   width: 90%;
+   margin: 0px auto;
+   padding-top: 50px;
+}
+.title {
+   position: fixed;
+   height: 50px;
+   width: 100%;
+   background-color: rgb(24, 23, 23);
+   z-index: 1;
+}
+.title .btn {
+	padding: 4px 8px;
+}
+.title-bd {
+   width: 96%;
+   margin: 0px auto;
+   font-size: 14px;
+   font-weight: bold;
+   color: white;
+}
+.title-text {
+   float: left;
+   font-size: 24px;
+   margin-top: 24px;
+}
+.exam-choose {
+   float: right;
+   margin-top: 14px; 
+}
+.exam-ul,
+.unit-ul {
+   max-height: 500px;
+   overflow: auto;
+}
+.title .logo {
+   width: 50px;
+   margin-right: 20px;
+   margin-top: -24px;
+}
+.logout {
+   float: right;
+   margin-left: 30px;
+   /* margin-top: 13px; */
+   margin-top: 20px;
+}
+iframe {
+   margin-top: 10px;
+}
+.unit-tree {
+   font-size: 14px;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1000;
+   display: none;
+   float: left;
+   min-width: 160px;
+   padding: 5px 0;
+   margin: 2px 0 0;
+   list-style: none;
+   background-color: #fff;
+   border: 1px solid #ccc;
+   border: 1px solid rgba(0,0,0,0.2);
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   -webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+   background-clip: padding-box;
+   overflow-y: auto; 
+   overflow-x: hidden;
+   max-height: 400px;
+   width: 180px;
+}
+.unit-tree span {
+   font-size: 14px;
+   font-weight: normal;
+}
+#help {
+   position: fixed;
+   right: 0px;
+   top: 300px;
+   width: 24px;
+   background-color: rgb(195, 195, 195);
+      padding-left: 10px;
+      border-radius: 10px 0 0 10px;
+}
+#help a {
+   color: green;
+}
+#help a:HOVER {
+   text-decoration: none;
+}
+#search {
+   position: fixed;
+   top: 60px;
+   right: 0px;
+}
+#search .examNo {
+	width: 250px;
+}
+.unit-small {
+   width: 60px!important;
+}
+.unit-type-small {
+   width: 50px!important;
+}
+.exam-small {
+   width: 60px!important;
+}
+.btn-group .btn:first {
+   min-width: 50px;
+}
+#help a:hover,
+#help a:active,
+#help a:visited,
+#help a:link {
+	text-decoration: none;
+}

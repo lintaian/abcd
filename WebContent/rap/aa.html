@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#canvas svg {
+    margin: 0 auto;
+    margin-top: 0px;
+    border: 1px black solid;
+}
+
+</style>
+
+</head>
+<body>
+<div id="canvas"></div>
+<div id="bar"></div>
+<input id="btn" type="button">button</input>
+<canvas id="myCanvas" style="display: none;"></canvas>
+<img id="myImg" src="">
+<script src="../js/lib/jquery.js"></script>
+<script src="min.js"></script>
+<script src="canvg.js"></script>
+<script src="exp.js"></script>
+<script>
+function convertImgToBase64(url, callback, outputFormat){ 
+	var canvas = document.createElement('CANVAS'); 
+	var ctx = canvas.getContext('2d'); 
+	var img = new Image; 
+	img.onload = function(){ 
+		canvas.height = img.height; 
+		canvas.width = img.width; 
+		ctx.drawImage(img,0,0); 
+		var dataURL = canvas.toDataURL(outputFormat || 'image/png'); 
+		callback.call(this, dataURL); 
+		// Clean up 
+		canvas = null; 
+	}
+	img.src = url; 
+} 
+$("#btn").click(function (e) {
+    var svg = paper.toSVG();
+    //document.getElementById('bar').innerHTML = svg;
+    canvg(document.getElementById('myCanvas'), svg);
+    setTimeout(function() {
+        var dataURL = document.getElementById('myCanvas').toDataURL('png');
+        document.getElementById('myImg').src = dataURL;
+    }, 100);
+});
+
+    var canvas = document.getElementById('canvas');
+
+    paper = new Raphael(canvas, 2000, 1500);
+	
+    convertImgToBase64('../image?examCode=5101050015070101&title=a-5&examNo=820030101001&t=0.5263539960142225', function(data, aa) {
+    	console.log(data, aa);
+		paper.image(data, 0, 0, 2000, 1500);
+    });
+	
+    var mousedown = false;
+    var lastX, lastY, path, pathString;
+
+$(canvas).mousedown(function (e) {
+    mousedown = true;
+
+    var x = e.offsetX,
+        y = e.offsetY;
+
+    pathString = 'M' + x + ' ' + y + 'l0 0';
+    path = paper.path(pathString);
+
+    lastX = x;
+    lastY = y;
+});
+$(document).mouseup(function () {
+    mousedown = false;
+});
+
+$(canvas).mousemove(function (e) {
+    if (!mousedown) {
+        return;
+    }
+
+    var x = e.offsetX,
+        y = e.offsetY;
+
+    pathString += 'l' + (x - lastX) + ' ' + (y - lastY);
+    path.attr('path', pathString);
+
+    lastX = x;
+    lastY = y;
+});
+
+</script>
+</body>
+</html>

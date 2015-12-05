@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>提示页面</title>
+</head>
+<body style="background-color: #FFF">
+	<div style="margin: 100px auto; width: 900px;text-align: center;">
+		<div style="padding-top: 138px;">
+			<h2>图片加载失败啦!</h2>
+			<h3>可能原因是系统没有该图片。</h3>
+			<h3>您可以: <a href="javascript:void(0);" data-back-main>返回主页</a>
+				或者 <a href="javascript:void(0);" data-refresh>刷新</a></h3>		
+		</div>
+	</div>
+	<script src="./js/lib/jquery.js"></script>
+	<script>
+		$(function() {
+			$('a[data-back-main]').click(function() {
+				top.window.location.href = './main';
+			});
+			$('a[data-refresh]').click(function() {
+				window.location.reload(true);
+			});
+		});
+	</script>
+</body>
+</html>

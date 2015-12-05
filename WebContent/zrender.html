@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="main" style="width: 500px;height: 400px;background-color: gray;margin: 200px auto;"></div>
+	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/require.js"></script>
+	<script>
+	var fileLocation = 'js/lib/zrender';
+    require.config({
+        paths:{ 
+            zrender: fileLocation,
+            'zrender/shape/Rose': fileLocation,
+            'zrender/shape/Trochoid': fileLocation,
+            'zrender/shape/Circle': fileLocation,
+            'zrender/shape/Sector': fileLocation,
+            'zrender/shape/Ring': fileLocation,
+            'zrender/shape/Ellipse': fileLocation,
+            'zrender/shape/Rectangle': fileLocation,
+            'zrender/shape/Text': fileLocation,
+            'zrender/shape/Heart': fileLocation,
+            'zrender/shape/Droplet': fileLocation,
+            'zrender/shape/Line': fileLocation,
+            'zrender/shape/Image': fileLocation,
+            'zrender/shape/Star': fileLocation,
+            'zrender/shape/Isogon': fileLocation,
+            'zrender/shape/BezierCurve': fileLocation,
+            'zrender/shape/Polyline': fileLocation,
+            'zrender/shape/Path': fileLocation,
+            'zrender/shape/Polygon': fileLocation
+        }
+    });
+	require(['zrender', 'zrender/shape/Image', 'zrender/shape/Polyline'], function(zrender, ImageShape, Polyline) {
+		$(function() {
+			var pointList = [],
+			img = '',
+			initImg = 'img/logo.jpg',
+			mouseDown = false,
+			interval;
+			var zr = zrender.init(document.getElementById('main'));
+			zr.clear();
+			$('body').on('mousedown', '#main', function(e) {
+				mouseDown = true;
+				pointList = [];
+				img = zr.toDataURL('png');
+				interval = setInterval(function() {
+					if (mouseDown) {
+						drawLine(pointList);
+					} else {
+						clearInterval(interval);
+					}
+					img = zr.toDataURL('png');
+					drawImage(img);
+				}, 30);
+			});
+			$('body').on('mousemove', '#main', function(e) {
+				if (mouseDown) {
+					pointList.push([e.offsetX, e.offsetY]);
+				}
+			});
+			$('body').on('mouseup', '#main', function(e) {
+				mouseDown = false;
+			});
+			drawImage(initImg);
+			function drawImage(url) {
+				var image = new ImageShape({
+			        style: {
+			            image: url,
+			            x: 0,
+			            y: 0
+			        }
+			    });
+			    zr.addShape(image);
+			    zr.render();
+			}
+			function drawLine(pl) {
+				zr.clear();
+				drawImage(img);
+				var shape = new Polyline({
+			        style: {
+			            pointList: pl,
+			            smooth: 'spline',
+			            strokeColor: 'red',
+			            lineWidth: 1
+			        }
+			    });
+			    zr.addShape(shape);
+				zr.render();
+			}
+		})
+    });
+	</script>
+</body>
+</html>
